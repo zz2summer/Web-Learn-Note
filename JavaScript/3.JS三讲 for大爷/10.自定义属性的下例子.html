@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		ul {
+			width:400px;
+			margin:10px auto;
+		}
+		li {
+			height: 50px;
+			font:30px/50px "simhei";
+			text-indent: 40px;
+			border:1px solid red;
+			margin-top: 5px;
+		}
+		.active{
+			background: #ccc;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var aLi = document.getElementsByTagName('li');
+			var onOff = true;
+
+			for(var i=0; i<aLi.length; i++){
+				aLi[i].onOff = true;
+				aLi[i].onclick = function(){
+
+					if(this.onOff == true){
+						this.className = 'active';
+						this.onOff = false;
+					}else{
+						this.className = '';
+						this.onOff = true;
+					}
+					
+				};
+			}
+		};
+	</script>
+</head>
+<body>
+	<ul>
+		<li onOff="true">1</li>
+		<li onOff="true">2</li>
+		<li onOff="true">3</li>
+		<li onOff="true">4</li>
+		<li onOff="true">5</li>
+		<li onOff="true">6</li>
+		<li onOff="true">7</li>
+		<li onOff="true">8</li>
+		<li onOff="true">9</li>
+		<li onOff="true">10</li>
+	</ul>
+</body>
+</html>

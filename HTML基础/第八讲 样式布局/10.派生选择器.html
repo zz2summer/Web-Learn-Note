@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*span {
+			border:1px solid red;
+		}*/
+		#box1 span {
+			border:1px solid red;
+		}
+		#box2 span {
+			display: inline-block;
+			width:100px;
+			height:100px;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		派生选择器
+			是由 id选择器 class选择器 标签名选择器组合而成
+			
+			id选择器    10000
+			class选择器 100
+			标签名选择器 1
+			#box2 span 10000 + 1 10001
+
+	 -->
+	 <div id="box1">
+	 	<span>我是box1的span</span>
+	 	<span>我是box1的span</span>
+	 	<span>我是box1的span</span>
+	 	<span>我是box1的span</span>
+	 </div>
+	 <div id="box2">
+	 	<span>我是box2的span</span>
+	 	<span>我是box2的span</span>
+	 	<span>我是box2的span</span>
+	 	<span>我是box2的span</span>
+	 </div>
+</body>
+</html>

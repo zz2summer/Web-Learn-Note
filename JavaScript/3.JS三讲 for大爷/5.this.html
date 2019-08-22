@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>我是LI 1</li>
+		<li>我是LI 2</li>
+		<li>我是LI 3</li>
+	</ul>
+</body>
+</html>
+<script>
+	/*
+		函数
+			function(){} 匿名函数
+			function fn1(){} 命名函数 fn1就是函数名
+
+			函数就是用来干活的 ？ 函数什么时候干活 换句话说， 函数什么时候执行
+
+			函数不调用就不会执行
+				函数的调用
+
+					1.事件调用
+						比如：
+							1.aLi[0].onclick = function(){};
+							2.aLi[i].onclick = fn1;
+					2.直接调用
+						函数名+(); 就会直接调用,不管在那个位置，只要函数名加（）就会执行
+
+			*****
+				this 指向 这个的意思
+					1.事件调用时，this指的就是事件前面的对象
+					2.直接调用的时候 ，this永远指的是window
+
+	*/ 
+	var aLi = document.getElementsByTagName('li');
+
+	for(var i=0; i<aLi.length; i++){
+		aLi[i].onclick = function(){
+			 //alert(this.innerHTML);
+			fn1();
+		};
+		 // aLi[i].onclick = fn1;
+	}
+	// alert(i)
+	// fn1();
+	alert(1);
+	function fn1(){
+		alert(this);
+	}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

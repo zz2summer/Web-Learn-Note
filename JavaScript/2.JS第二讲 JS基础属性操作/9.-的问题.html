@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width:700px;
+			height:600px;
+			border:2px solid red;
+			background: yellow url("img/3.jpg") no-repeat;
+			background-size: 80% 80%;
+			margin:0 auto;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">洛克萨斯</div>
+</body>
+</html>
+<script>
+/*
+		在JS中的属性操作中，不允许出现“-” ，用驼峰式命名代替
+*/ 
+	var oDiv = document.getElementById('box');
+
+	oDiv.onclick = function(){
+		oDiv.style.backgroundColor = 'green';
+		oDiv.style.backgroundImage = 'url("img/2.jpg")';
+		oDiv.style.backgroundSize = '50% 50%';
+		oDiv.style.fontSize = '100px'; 
+	};
+
+</script>

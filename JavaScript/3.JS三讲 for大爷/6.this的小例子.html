@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		li {
+			width:50px;
+			height:50px;
+			background: red;
+			text-align: center;
+			font:30px/50px "simhei";
+			float:left;
+			margin-right: 5px;
+			color:#fff;
+			border-radius: 50%;
+			position: relative;
+			left:0;
+			top:0;
+			transition:1s;
+		}
+		ul {
+			width:285px;
+			margin:10px auto;
+			/*overflow: hidden;*/
+		}
+		.active {
+			background: #fff;
+			color:#000;
+			border:1px solid red;
+			/*top:100px;*/
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var aLi = document.getElementsByTagName('li');
+			var that = null;
+
+			for(var i=0; i<aLi.length; i++){
+				aLi[i].onclick = function(){
+					that = this;
+					fn1();
+				};
+			}
+			function fn1(){
+				for(var i=0; i<aLi.length; i++){
+					aLi[i].className = '';
+				}
+				that.className = 'active';
+			};
+		};
+	</script>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+</body>
+</html>

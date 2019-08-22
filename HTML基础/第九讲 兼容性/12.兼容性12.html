@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			border:10px solid red;
+			/*float:left;*/
+			width:600px;
+			overflow: hidden;
+		}
+		.box div {
+			width:100px;
+			height:100px;
+			background: blue;
+			border:5px solid #000;
+			margin:20px;
+			float: left;
+			display: inline;
+		}
+	</style>
+</head>
+<body>
+<!-- 
+		当一行子级元素宽度之和和父级的宽度相差超过3px，或者子级元素不满行的情况的时候，最后一行的子级元素的margin-bottom会失效
+ -->
+	<div class="box">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+</body>
+</html>

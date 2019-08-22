@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*div {
+			width:300px;
+			height:300px;
+			border:10px solid red;
+			font-size:24px;
+			overflow: hidden;
+			margin:0 auto;
+		}*/
+		/*div:hover{
+			color:blue;
+			text-decoration: underline;
+		}*/
+		/*div:after{
+			content: "我是伪类";background: red;
+		}*/
+		#box1 {
+			width:540px;
+			border:10px solid red;
+			margin:0 auto;
+			
+			/*height:108px;*/
+		}
+		span {
+			width:100px;
+			height:100px;
+			border:4px solid blue;
+			text-align: center;
+			line-height: 100px;
+			float:left;
+		}
+		.clear:after{
+			content: "";display: block;clear: both;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		1.overflow 溢出 
+				会重新计算元素的空间
+			hidden 溢出隐藏
+			auto   溢出出现滚动条
+			scroll 出现滚动条的位置
+		2.元素的居中
+			margin:0 auto;
+		3.元素的伪类
+			伪类：就是CSS一些元素身上的特殊属性
+			:hover 鼠标停留
+			:after 在元素内容之后插入一些内容
+
+		浮动：其实就是使元素脱离文档流，按照一定的方式排列，遇到相邻的浮动元素或者父级的边界停下来。
+		
+		BFC 就是清浮动 就是用来处理浮动元素脱离文档流的问题
+
+			1.父级也浮动
+				弊端：左右的margin:0 auto; 会失效；
+			2.父级加display:inline-block
+				弊端：左右的margin:0 auto; 会失效；
+				(如果需要让元素居中可以给父级加text-align:center)
+			3.给父级加高
+				弊端：扩展性不好
+			4.br标签
+				写法：<br/>
+				作用：换行
+			5.clear
+				clear 元素的某一方向不允许出现其他的浮动元素
+				left 
+				right
+				both  推荐使用
+				one
+				温馨小提示
+					不符合W3C规范 违反结构 样式 行为 三者分离原则
+			6.伪类清浮动
+			:after{
+				content:"";display:block;clear:both;
+			}
+				温馨提示：目前主流方法。建议使用
+
+
+	 -->
+	 <!-- <div>【学习进行时】人类同处一个地球，“地球村”的每个成员，如何携手共进？习近平在建党95周年庆祝大会上给出中国方案：“推动形【</div> -->
+	
+	<div id="box1" class="clear">
+		<span class="class1">1</span>
+		<span class="class2">2</span>
+		<span class="class3">3</span>
+		<span class="class4">4</span>
+		<span class="class5">5</span>
+		 
+	</div>
+	<!-- <div>
+		我是DIV
+		<br/>
+		我是DIV
+	</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

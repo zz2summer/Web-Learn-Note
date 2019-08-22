@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text">
+	<input type="button" value="判断">
+</body>
+</html>
+<script>
+	var oBtn = document.getElementsByTagName('input');
+	var str = '';
+	oBtn[1].onclick = function(){
+		str = oBtn[0].value;
+
+		if(str == ''){
+
+			alert('大哥，你啥也没写啊！')
+		}else{
+			if( isNaN (str) ){
+				alert('哥们不是数字，是NaN')
+			}else{
+				alert('是数字，是'+ str );
+			}
+		}
+
+	};
+
+
+</script>

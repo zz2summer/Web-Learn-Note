@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{
+			margin:0;
+			padding:0;
+		}
+		li {
+			list-style: none;
+		}
+		#box {
+			width:200px;
+			margin:0 auto;
+			font:30px/60px "simhei";
+			text-align: center;
+		}
+		#box span {
+			display: block;
+			height:60px;
+			border:1px solid #1B1509;
+		}
+		#box ul {
+			border:1px solid #1B1509;
+			margin-top: 6px;
+			box-shadow: 2px 2px 1px #ccc,-2px -2px 1px #ccc;
+			/*display: none;*/
+
+			transition:0.3s;
+			/*opacity: 0;*/
+			height:0;
+			overflow: hidden;
+		}
+		#box li {
+			height:60px;
+		}
+		#box li:hover {
+			background: #4136E2;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<span id="span1">设置</span>
+		<ul id="ul1">
+			<li>搜索设置</li>
+			<li>高级设置</li>
+			<li>关闭预测</li>
+			<li>搜索历史</li>
+		</ul>
+	</div>
+</body>
+</html>
+<script>
+/*
+当鼠标移入到span的时候，让ul显示出来
+html的属性操作
+	display
+	opacity
+	height
+	width
+	visibility
+	......
+*/ 
+	var oDiv = document.getElementById('box');
+	var oUl = document.getElementById('ul1');
+
+	oDiv.onmouseover = function(){
+		// oUl.style.display = 'block';
+		// oUl.style.opacity = 1;
+		oUl.style.height = '250px';
+	};
+
+	oDiv.onmouseout = function(){
+		// oUl.style.display = 'none';
+		// oUl.style.opacity = 0;
+		oUl.style.height = '0px';
+	};
+
+
+</script>

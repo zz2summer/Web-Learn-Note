@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		span {
+			display: block;
+			height:60px;
+			background: #21EE34;
+			font:35px/60px "simhei";
+			color:#fff;
+		}
+		img {
+			width:150px;
+			height:80px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="box">
+		<input type="button" value="点" id="btn1">
+		
+	</div>
+</body>
+</html>
+<script>
+/*
+		innerHTML就是元素里面所有的东西 文字 换行 标签 。。。 
+
+		innerHTML可以进行读操作 也可以进行写操作
+			oDiv.innerHTML 
+				读取元素里面的内容
+			oDiv.innerHTML = 新的值;
+				替换
+					用新的值 代替 旧的值
+
+			+=
+				在自身的基础上 累加一个新的值 可以用加等
+				比如
+					a = a + 2;
+					a += 2;
+
+				在比如：
+					oDiv.innerHTML = oDiv.innerHTML + '诺手';
+					oDiv.innerHTML += '诺手';
+*/ 
+	var oDiv = document.getElementById('box');
+	var oBtn1 = document.getElementById('btn1');
+	var a = 1;
+
+	// alert( oDiv.innerHTML );
+	oBtn1.onclick = function(){
+		// oDiv.innerHTML = oDiv.innerHTML + '诺手';
+		// a = a + 10;
+		// a += 10;
+		// alert(a);
+		// oDiv.innerHTML += '诺手';
+		//1.空 + '诺手' 2.'诺手诺手' 3.'诺手诺手诺手' 
+		if( a > 3){
+			a = 1;
+		}
+		oDiv.innerHTML += '<img src="img/'+ a +'.jpg" alt="" />';
+		a = a + 1;
+	};
+
+</script>
+
+
+
+
+
+
+
+
+
+

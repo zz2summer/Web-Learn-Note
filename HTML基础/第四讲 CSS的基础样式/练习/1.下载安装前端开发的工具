@@ -1,0 +1,10 @@
+1.下载安装前端开发的工具 sublime ps 浏览器
+2.安装sublime工具插件 Emmet SideBarEnhancements  调整PS的默认设置
+3.建立一个HTML模板
+4.熟悉讲过的知识点 
+5.建立一个html模板
+	设置三个div 分别设置样式
+	
+	第一个 宽535 高280 背景红色 图first.jpg 在正中间显示
+	第二个 宽435 高280 背景黄色 图h5.jpg  在右中间显示
+	第三个 宽400 高280 背景图lanou3g.jpg *正常显示*

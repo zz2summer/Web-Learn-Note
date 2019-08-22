@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			height:500px;
+			border:1px solid red;
+			position: relative;
+		}
+		div {
+			width:100px;
+			height:100px;
+			background: red;
+			position: absolute;
+			left:0;
+			top:0;
+			transition:2s all cubic-bezier(1.000, -0.520, 0.000, 1.545);
+		}
+		body:hover div {
+			/*width:400px;
+			height:400px;
+			background: blue;*/
+			left:800px;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+<!-- 
+	过渡 ，就是从一个值到另一个值之间的过程，就是过渡
+
+		transition
+			比如：
+				transition:1s 1s all ease; 后三个值可以省略
+
+				第一个值：过渡的总时间 单位是s或ms
+
+				第二个值：延迟过渡的时间 单位是s或ms
+
+				第三个值：需要过渡的样式
+
+				第四个值：过渡的方式
+
+							linear 匀速
+
+							ease    慢速开始，然后慢慢变快
+							ease-in 慢速开始
+							ease-out 慢速结束
+							ease-in-out 开始和结束都慢
+							cubic-bezier(1,0,1,0) 贝瑟尔曲线
+							贝瑟尔曲线工具 http://xuanfengge.com/easeing/ceaser/
+
+					兼容，ie9以下不支持
+
+
+
+ -->
+</body>
+</html>
+
+
+
+
+
+
+

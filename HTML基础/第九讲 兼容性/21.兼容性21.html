@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			width:100px;
+			height:100px;
+			background: red;
+			background: yellow\9;
+			+background: black;
+			_background:pink;
+		}
+	</style>
+</head>
+<body>
+<!-- 
+		css hack:
+			\9 ie10之前的ie浏览器解析的代码
+			+或者* 表示ie7包括7之前的ie浏览器
+			_表示 ie6包括6之前的ie浏览器
+ -->
+	<div class="box"></div>
+</body>
+</html>

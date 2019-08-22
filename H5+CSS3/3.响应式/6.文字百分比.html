@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html {
+			font-size: 40px;
+		}
+		div {
+			font-size: 60px;
+			color: red;
+		}
+		span {
+			font-size: 1.5rem;
+			color:yellow;
+		}
+		a {
+			font-size: 2rem;
+		}
+		@media screen and (max-width: 900px){
+			html {
+				font-size: 20px;
+			}
+		}
+		@media screen and (max-width: 700px){
+			html {
+				font-size: 10px;
+			}
+		}
+	</style>
+</head>
+<body>
+<!-- 
+		em 和 rem 
+			em父级的文字大小的倍数 父级大小是多少，决定子级文字em的大小
+
+			rem 就是针对HTML文字字体大小
+
+ -->
+	<div>
+		蓝鸥科技
+		<span>
+			蓝鸥科技
+			<a href="#">蓝鸥科技</a>
+		</span>
+	</div>
+</body>
+</html>

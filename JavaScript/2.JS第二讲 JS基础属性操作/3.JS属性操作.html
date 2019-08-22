@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	 <input type="text" value="" id="btn1">
+	 <input type="button" value="走起" id="btn2">
+	 <br>
+	 <img src="" width="400" height="300" alt="" id="img1">
+</body>
+</html>
+<script>
+	var oBtn1 = document.getElementById('btn1');
+	var oBtn2 = document.getElementById('btn2');
+	var oImg = document.getElementById('img1');
+	var a = 1;
+
+	oBtn2.onclick = function(){
+		 oImg.src = 'img/' + a + '.jpg';
+		// alert('img/' + a + '.jpg');//'img/1.jpg' 'img/2.jpg'
+		a = a + 1;
+	};
+</script>
+
+
+
+
+
+

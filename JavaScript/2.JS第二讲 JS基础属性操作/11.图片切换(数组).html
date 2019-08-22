@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			background: #96D5E8;
+		}
+		#box {
+			width:500px;
+			height:420px;
+			margin: 10px auto;
+			position: relative;
+			border:4px solid #BCC9EF;
+			border-radius: 20px;
+		}
+		#box img {
+			width:100%;
+			height:100%;
+			border-radius: 20px;
+		}
+		#box a {
+			width:50px;
+			height:50px;
+			border:1px solid #148BF6;
+			text-decoration: none;
+			text-align: center;
+			font:20px/50px "simhei";
+			border-radius: 4px ;
+			position: absolute;
+			top:50%;
+			margin-top: -25px;
+		}
+		#left1 {
+			left:-100px;
+		}
+		#right1 {
+			right:-100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<img src="img/1.jpg" alt="" id="img1">
+		<a href="#" id="left1"> < </a>
+		<a href="#" id="right1"> > </a>
+	</div>
+</body>
+</html>
+<script>
+	var oImg = document.getElementById('img1');
+	var oRight1 = document.getElementById('right1');
+	var arr = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpeg','img/5.jpg','img/6.jpg','img/7.jpg'];
+	var num = 0;
+	// alert( arr.length );
+	oRight1.onclick = function(){
+		num ++;// num = num + 1; // num ++;
+		if(num == arr.length){
+			num = 0;
+		}
+		oImg.src = arr[num];
+	};
+</script>
+
+
+
+
+
+
+

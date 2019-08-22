@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	/*
+		循环语句
+			for
+				写法：
+					for( ; ; ){
+	
+					}
+					
+					1.声明一个变量 var i=0
+					2.条件判断语句 i<5 （非常重要，条件判断为真就会执行，为假就会跳出循环）
+					3.执行代码    for循环大括号里的代码
+					4.变量的自增或者自减 i++
+
+					温馨提示：
+						1.变量的值 或者 i的值
+							for(var i=0; i<5; i++){
+								alert(i); // 0 1 2 3 4
+							}
+							alert(i); 5
+							在大括号里是 0 1 2 3 4
+							在大括号外是 5
+						2.在第二步中，条件语句一定要记得让条件不成立
+
+
+					1 2 3 4 2 3 4 2 3 4 2 3 4 2
+	// */ 
+	// for(var i=0; i<5; i++){
+	// 	alert(1);
+	// }
+	for(var i=0; true; i++){
+		alert(i);
+	}
+	
+</script>

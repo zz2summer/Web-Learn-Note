@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			#box1 {
+				width:300px;
+				
+				background: red;
+
+				/*border:1px solid #000;*/
+				/*overflow:hidden;*/
+				/*padding-top:100px;*/
+			}
+			#box2 {
+				width:300px;
+				height:200px;
+				background: yellow;
+				/*margin-top: 100px;*/
+				margin-bottom: 30px;
+			}
+			#box3 {
+				width:300px;
+				height:200px;
+				background: blue;
+				margin-top:30px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="box1">
+			<div id="box2"></div>
+			<div id="box3"></div>
+		</div>
+		<!-- 标签的嵌套 确定父子级关系 
+			
+			1. 第一个子级的margin-top会在特定的情况下穿透父级
+				规避方法：
+					1.给父级加边框
+					2.给父级加overflow:hidden;
+					3.不要用margin-top，父级的padding-top代替
+			2. 兄弟关系的margin-top和margin-bottom 会叠压
+
+		-->
+	</body>
+</html>

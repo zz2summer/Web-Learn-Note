@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 
+		属性操作
+			属性 分为属性名 和 属性值
+				在标签中设置属性 方法： 属性名="属性值"
+				在CSS中设置属性 方法： 属性名:属性值;
+			操作
+
+				读操作 获取 查找
+					方法： 元素.属性名 比如： oDiv.style.width
+				写操作 添加 替换 修改
+					方法： 元素.属性名 = 新要设置的值 比如：oDiv.style.width = '400px'
+					
+					= 一个等号就是赋值
+						会把等号右边的给左边
+
+	 -->
+<!-- 	 <div id="box" class="cla1" style="height:100px;"></div>
+	 <input type="text" value="">
+	 <a href="#"></a>
+	 <img src="img/1.jpg" alt=""> -->
+	 <input type="text" value="" id="btn1">
+	 <input type="button" value="走起" id="btn2">
+	 <br>
+	 <img src="" width="400" height="300" alt="" id="img1">
+</body>
+</html>
+<script>
+	var oBtn1 = document.getElementById('btn1');
+	var oBtn2 = document.getElementById('btn2');
+	var oImg = document.getElementById('img1');
+
+	oBtn2.onclick = function(){
+		// oImg.src = 'img/1.jpg';
+		// alert(oBtn1.value);
+		oImg.src = oBtn1.value; // "img/1.jpg"
+	};
+</script>
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		.box {
+			background: red;
+			zoom:1;
+		}
+		.div {
+			width:200px;
+			height:200px;
+			background: blue;
+			margin:100px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		haslayout
+
+		在IE下大部分兼容性都是因为haslayout属性的触发问题，尽量触发haslayout属性，可以减少很多IE下的兼容下的问题。
+
+		在IE下父级有边框的时候，子元素的margin会失效
+
+		解决方法：触发父级的haslayout属性
+	 -->
+	 <div class="box">
+	 	<div class="div"></div>
+	 </div>
+</body>
+</html>

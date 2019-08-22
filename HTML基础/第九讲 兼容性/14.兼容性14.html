@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			width:200px;
+			height: 200px;
+			border:1px solid #000;
+			position: relative;
+		}
+		a {
+			position: absolute;
+			width:40px;
+			height:40px;
+			background: red;
+			right: 20px;
+			top:0px;
+		}
+		ul {
+			width: 150px;
+			height: 150px;
+			background: yellow;
+			margin:0 0 0 50px;
+			padding:0;
+			float: left;
+			display: inline;
+		}
+	</style>
+</head>
+<body>
+<!-- 
+		在IE6下，当浮动元素和绝对定位元素是兄弟关系的时候，绝对定位会失效
+		解决方法：
+			不让浮动元素和绝对定位元素是兄弟关系，用div或者其他标签把a标签包起来
+ -->
+	<div class="box">
+		<ul></ul>
+		<div>
+			<a href="#"></a>
+		</div>
+	</div>
+</body>
+</html>

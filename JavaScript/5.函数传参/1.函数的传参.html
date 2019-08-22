@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 函数的传参 
+			参数	
+				形参 相当于我们在函数里面声明了一个变量 变量名就是形参 名字是我们自己瞎编
+					形参的数量是无限
+				
+				实参 函数调用时括号里的值 JS的数据类型 数字 字符串 布尔 函数 对象
+		
+		目的就是代码重用
+			1.尽量保证html代码结构一样
+			2.把核心的程序实现，用函数包起来
+			3.把不一样地方，通过实参来传递
+	-->
+</body>
+</html>
+<script>
+	
+	// fn1('德玛西亚');
+
+	// function fn1( a ){
+	// 	alert(a);
+	// }
+	// fn2(10,20,30);
+
+	// function fn2 (a,b,c){
+	// 	// var a;
+	// 	// var b;
+	// 	// var c;
+	// 	// a = 10;
+	// 	// b = 20;
+	// 	// c = 30;
+	// 	alert( a + b + c);
+	// }
+	fn3( 10 );
+	fn3( '北京' );
+	fn3( function(){
+		alert('函数执行了');
+	} )
+	function fn3( a ){
+		if( typeof a == 'number' ){
+			alert( a*100 );
+		}else if( typeof a == 'string'){
+			alert( a + '蓝鸥科技');
+		}else if( typeof a == 'function'){
+			a();
+		}
+	}
+</script>
+
+
+
+
+
+

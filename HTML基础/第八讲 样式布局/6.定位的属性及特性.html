@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box1 {
+			width:400px;
+			height:400px;
+			border:10px solid red;
+			margin:0 auto;
+			position: relative;
+			/*left:300px;*/
+		}
+		#box2{
+			width:100px;
+			height:100px;
+			background: yellow;
+			position: absolute;
+			left:10px;
+			top:30px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		
+		定位： 把一个元素 按照一定的方式 定到页面的某一个位置
+
+			position
+
+				相对定位 relative
+					针对自己本身的位置进行定位
+
+				绝对定位 absolute
+					针对有定位的父级的原点进行定位，如果父级没有定位，会找父级的父级身上有没有定位，如果有，针对父级的父级的原点进行定位，以此类推，如果都没有定位，针对document进行定位
+					温馨小提示：
+						绝对定位即使没有初始值，也一定要设置值
+						left:0px;
+						top:0px;
+
+				固定定位 fixed
+					针对页面窗口进行定位
+					温馨提示：
+						IE6 不支持固定定位
+
+			偏移量
+				left
+				top
+				right
+				bottom
+				温馨提示
+					left top 比 right bottom 的优先级要高
+	 -->
+	 <div id="box1">
+	 	<div id="box2"></div>
+	 </div>
+</body>
+</html>

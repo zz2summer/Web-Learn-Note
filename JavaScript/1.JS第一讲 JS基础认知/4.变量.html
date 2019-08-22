@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{
+			margin:0;
+			padding:0;
+		}
+		li {
+			list-style: none;
+		}
+		#box {
+			width:200px;
+			margin:0 auto;
+			font:30px/60px "simhei";
+			text-align: center;
+		}
+		#box span {
+			display: block;
+			height:60px;
+			border:1px solid #1B1509;
+		}
+		#box ul {
+			border:1px solid #1B1509;
+			margin-top: 6px;
+			box-shadow: 2px 2px 1px #ccc,-2px -2px 1px #ccc;
+			display: none;
+		}
+		#box li {
+			height:60px;
+		}
+		#box li:hover {
+			background: #4136E2;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<span id="span1">设置</span>
+		<ul id="ul1">
+			<li>搜索设置</li>
+			<li>高级设置</li>
+			<li>关闭预测</li>
+			<li>搜索历史</li>
+		</ul>
+	</div>
+</body>
+</html>
+<script>
+/*
+		变量 起名字
+			毕加索的全名：巴勃罗.迭戈.荷瑟.山迪亚哥.弗朗西斯科.德.保拉.居安.尼波莫切诺.克瑞斯皮尼亚诺.德.罗斯.瑞米迪欧斯.西波瑞亚诺.德.拉.山迪西玛.特立尼达.玛利亚.帕里西奥.克里托.瑞兹.布拉斯科.毕加索
+
+		变量声明
+			方法：
+				var 变量名
+					var变量声明的关键字
+					变量名就是你自己瞎编的 但是不能是关键保留字 比如：var function
+					关键字 保留字的网址 http://www.runoob.com/js/js-reserved.html
+*/ 
+	var oDiv = document.getElementById('box');
+	var oUl = document.getElementById('ul1');
+
+	oDiv.onmouseover = function(){
+		oUl.style.display = 'block';
+	};
+
+	oDiv.onmouseout = function(){
+		oUl.style.display = 'none';
+	};
+
+
+</script>

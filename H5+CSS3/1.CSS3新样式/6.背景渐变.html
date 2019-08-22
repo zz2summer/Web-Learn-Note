@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			height:200px;
+			border:1px solid red;
+			/*background: linear-gradient(90deg,red,yellow,#26FF07,rgba(255,0,0,0.7),blue);*/
+
+			/*background: linear-gradient(90deg,red,yellow,#26FF07,rgba(255,0,0,0.7),blue);*/
+			/*background: linear-gradient(90deg,red 100px,yellow 120px,blue 140px);*/
+			background:#ccc -webkit-linear-gradient(-45deg,
+				rgba(255,255,255,0) 100px,
+				rgba(255,255,255,1) 140px,
+				rgba(255,255,255,1) 180px,
+				rgba(255,255,255,0) 220px,
+				rgba(255,255,255,0)
+			) 0 0  no-repeat;
+			background:#ccc -webkit-linear-gradient(-45deg,
+				rgba(255,255,255,0) 100px,
+				rgba(255,255,255,1) 140px,
+				rgba(255,255,255,1) 180px,
+				rgba(255,255,255,0) 220px,
+				rgba(255,255,255,0)
+			) 0 0  no-repeat;
+			transition:1s;
+		}
+		body:hover div {
+			background-position: 2000px 0;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+
+	<!-- 
+
+		渐变
+		    ie9以下不支持
+			线型渐变
+
+			径向渐变
+	 -->
+</body>
+</html>

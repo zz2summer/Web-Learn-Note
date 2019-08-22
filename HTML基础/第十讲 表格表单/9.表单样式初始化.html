@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input {
+			margin:0;
+			padding:0;
+			outline: none;
+		}
+		option {
+			padding:0;
+		}
+		textarea {
+			padding:0;
+			resize:none;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+<!-- 
+
+		form
+			action="需要传送到地址"
+			method="传送的方式"
+				get 在地址栏做内容的拼接，用户可以看的到
+				post 把表单元素里面的内容做拼接，并且打包传送的action的地址，用户看不到
+			target
+				_blank 在新窗口打开
+				-self  在当前窗口打开
+
+
+			input的type类型
+				文本 text
+				密码 password
+				radio 单选
+				checkbox 多选
+				file  文件上传
+				button 按钮
+				hidden 隐藏
+				reset 重置
+				submit 提交
+
+			温馨提示 ：
+				input里面标签的值都体现在value中 
+				name属性一定要设置，如果不设置，无法实现上传
+
+
+ -->
+	<form action="http://www.baidu.com" method="post" target="_blank">
+		用户名：<input type="text" value="" name="yonghuming">
+		<br>
+		密码：<input type="password" value="" name="mima">
+		<br>
+		性别：男:<input type="radio" name="sex" value="男"> 女:<input type="radio" name="sex" value="女"> 其他<input type="radio" name="sex" value="你猜">
+		兴趣爱好：
+			吃<input type="checkbox" value="吃" name="xingqu">
+			喝<input type="checkbox" value="喝" name="xingqu">
+			拉<input type="checkbox" value="拉" name="xingqu">
+			撒<input type="checkbox" value="撒" name="xingqu">
+			睡<input type="checkbox" value="睡" name="xingqu">
+		<br>
+		上传<input type="file" name="shangchuan">
+		<br>
+		按钮<input type="button" name="btn" value="1">
+		<br>
+		隐藏：->
+			<input type="hidden" name="yincang" value="你看不到我" />
+		<br>
+			<input type="reset" name="re">
+		<br>
+		<input type="submit">
+		<select name="diqu" id="">
+			<option value="河北">河北</option>
+			<option value="上海">上海</option>
+			<option value="北京">北京</option>
+			<option value="广州">广州</option>
+			<option value="大连">大连</option>
+		</select>
+		<br>
+		<textarea name="wenben" id="" cols="30" rows="10">中国人不是东亚病夫</textarea>
+		<br>
+	</form>
+</body>
+</html>

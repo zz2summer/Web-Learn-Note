@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+
+</head>
+<body>
+	<!-- 
+
+		语义：你说的话到底是什么意思
+		权重：优先先考虑谁
+	
+		
+
+		title标签
+			写法:<title></title>
+			双标签
+			语义：网页标题
+			权重最大	
+
+		div标签
+			写法：<div></div>
+			双标签
+			语义：无意义
+			默认样式：无
+
+		h标签
+			h1~h6
+			写法：
+				<h1></h1>
+				<h2></h2>
+				<h3></h3>
+				<h4></h4>
+				<h5></h5>
+				<h6></h6>
+			双标签
+			语义：标题
+			默认样式：font-size font-weight margin
+			
+			权重 ：h1 最大 h2 次之 h3更次之 。。。。。。。 
+				h1页面中最好不要超过一个
+				h2页面中最好不要超过12个
+				h3之后的h标签就随便了
+	
+
+
+		样式初始化文件 reset.css
+
+		群组选择器 , 例 :
+		h1,h2,h3,h4,h5,h6{
+			margin:0;
+		}
+		
+		p标签
+			写法：<p></p>
+			双标签
+			语义：段落
+			默认样式：margin
+
+			p标签在嵌套时不要包含块元素的标签
+
+		ul标签
+			写法：<ul></ul>
+			双标签
+			语义：无序列表
+			默认样式：margin padding-left list-style-type
+		li标签
+			写法：<li></li>
+			双标签
+			语义：列表项
+			默认样式：list-style-type
+
+		ol标签
+			写法：<ol></ol>
+			双标签
+			语义：有序列表
+			默认样式：margin padding-left list-style-type
+
+		ul,ol和li 是组合标签
+
+		ul,ol的第一层子级一定是li li的父级一定是ul或ol
+
+		<ul>
+			<li>
+				<h2></h2>
+			</li>
+		</ul>
+
+		<div>
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+
+		<ol>
+			<li>
+				<ul>
+					<li></li>
+				</ul>
+			</li>
+		</ol>
+		<div>
+			<ol>
+				<li></li>
+			</ol>
+		</div>
+	
+		dl标签
+			自定义列表 字典标签
+
+			dl dt dd
+
+			写法：<dl></dl>
+			双标签
+			语义：自定义列表
+			默认样式：margin
+
+			dt
+			写法：<dt></dt>
+			双标签
+			语义：列表标题
+			默认样式：无
+
+			dd
+			写法：<dd></dd>
+			双标签
+			语义：列表说明
+			默认样式：margin-left
+		
+		块标签
+			特性：
+				
+
+	 -->
+	 <div>我是DIV</div>
+	 <h1>我是h1</h1>
+	 <h2>我是h2</h2>
+	 <h3>我是h3</h3>
+	 <h4>我是h4</h4>
+	 <h5>我是h5</h5>
+	 <h6>我是h6</h6>
+	 <p>我是p</p>
+	 <!--  -->
+	 <p>
+	 	我是P1
+	 	<!-- <p>我是P2</p> -->
+	 	<!-- <div>我是DIV</div> -->
+	 </p>
+
+	<ul>
+		<li>我是li 1</li>
+		<li>我是li 2</li>
+		<li>我是li 3</li>
+		<li>我是li 4</li>
+	</ul>
+
+	<ol>
+		<li>我是li 1</li>
+		<li>我是li 2</li>
+		<li>我是li 3</li>
+		<li>我是li 4</li>
+	</ol>
+
+	<dl>
+		<dt>美女</dt>
+		<dd>古代用来形容女子很漂亮</dd>
+		<dd>打招呼</dd>		
+	</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

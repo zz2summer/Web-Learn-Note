@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{
+			margin:0;
+			padding:0;
+		}
+		li {
+			list-style: none;
+		}
+		#box {
+			width:200px;
+			margin:0 auto;
+			font:30px/60px "simhei";
+			text-align: center;
+		}
+		#box span {
+			display: block;
+			height:60px;
+			border:1px solid #1B1509;
+		}
+		#box ul {
+			border:1px solid #1B1509;
+			margin-top: 6px;
+			box-shadow: 2px 2px 1px #ccc,-2px -2px 1px #ccc;
+			display: none;
+		}
+		#box li {
+			height:60px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<span id="span1">设置</span>
+		<ul id="ul1">
+			<li>搜索设置</li>
+			<li>高级设置</li>
+			<li>关闭预测</li>
+			<li>搜索历史</li>
+		</ul>
+	</div>
+</body>
+</html>
+<script>
+	// alert("蓝鸥");
+	/*
+		当鼠标移入到span的时候，让ul显示出来
+		1.当鼠标移入span的时候，让ul的样式的display变成block
+		2.当鼠标移出span的时候，让ul的样式的display变成none
+		在CSS里找标签通过选择器 ， #box
+	*/ 
+	// alert(document.getElementById('span1'))
+	document.getElementById('span1').onmouseover = function(){
+		// 让ul的样式的display变成block
+		document.getElementById('ul1').style.display = 'block';
+	};
+
+	document.getElementById('span1').onmouseout = function(){
+		// 让ul的样式的display变成none
+		document.getElementById('ul1').style.display = 'none';
+	};
+</script>
+
+
+
+
+
+
+

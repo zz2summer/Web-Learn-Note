@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			height:2px;
+			background: red;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+<!-- 
+		在IE6下元素的高度如果小于19px的时候，会被当成19px来处理
+		解决方法：overflow:hidden;
+ -->
+	<div class="box"></div>
+</body>
+</html>

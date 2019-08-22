@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width:100px;
+			height:100px;
+			background: red;
+			position: relative;
+			left:0;
+			top:0;
+			margin-top: 30px;
+			transition:1s;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			/*
+				window.onload 当页面加载完的事件
+			*/ 
+			var oDiv = document.getElementById('box');
+			var oBtn1 = document.getElementById('btn1');
+			var oBtn2 = document.getElementById('btn2');
+			var oBtn3 = document.getElementById('btn3');
+			var oBtn4 = document.getElementById('btn4');
+
+			oBtn1.onclick = function(){
+				oDiv.style.width = '400px';
+			};
+			oBtn2.onclick = function(){
+				oDiv.style.height = '400px';
+			};
+			oBtn3.onclick = function(){
+				oDiv.style.background = 'yellow';
+			};
+			oBtn4.onclick = function (){
+				oDiv.style.left = '400px';
+			};
+		};
+	</script>
+</head>
+<body>
+	<input type="button" value="按钮1" id="btn1">
+	<input type="button" value="按钮2" id="btn2">
+	<input type="button" value="按钮3" id="btn3">
+	<input type="button" value="按钮3" id="btn4">
+	<div id="box"></div>
+</body>
+</html>
+
+
+

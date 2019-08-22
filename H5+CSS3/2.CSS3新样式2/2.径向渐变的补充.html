@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width:300px;
+			height:200px;
+			margin:30px auto;
+		}
+		#box1 {
+			background: linear-gradient(to right,red,yellow,blue);
+		}
+		#box2 {
+			background: radial-gradient(circle at 100px 30px,red 10%,yellow 30%,blue 60%,green);
+		}
+	</style>
+</head>
+<body>
+	<div id="box1"></div>
+	<div id="box2"></div>
+	<!-- 
+			径向渐变 ie9以下不支持
+				渐变都是背景下一个属性
+					background: radial-gradient(at center,red,yellow,blue);
+				径向渐变是从圆心往进行渐变
+					括号里的第一个值，可以是圆心位置或者圆的形状 
+						圆的形状 
+							默认为椭圆
+							圆形：circle
+
+						圆心的位置可以使模糊的值，也可以是具体的数值
+							模糊的值
+								at left
+								at center
+								at right
+								at top
+								at bottom
+							具体的数值
+								at 100px 200px
+									100px为X轴的偏移量
+									200px为Y轴的偏移量
+					从第二个值开始，是颜色值 ，颜色值可以无限的写	
+						颜色值，可以通过具体的数值来规定，渐变区域或者范围
+							具体的数值可以是
+								1，100px
+								2，百分比
+
+
+	 -->
+</body>
+</html>

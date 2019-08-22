@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		#box {
+			width:200px;
+			margin:20px auto;
+			text-align: center;
+		}
+		h2{
+			height:60px;
+			font:30px/60px "simhei";
+			border:1px solid red;
+		}
+		li {
+			height:50px;
+			font:25px/50px "simhei";
+		}
+		ul {
+			border:1px solid red;
+			display: none;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var oDiv = document.getElementById('box');
+			var oUl = oDiv.getElementsByTagName('ul')[0];
+			var onOff = true;
+			// 开关，通过布尔值的变化，让代码在if的括号和else的括号里进行切换执行
+
+			oDiv.onclick = function(){
+
+				if(onOff == true){
+					oUl.style.display = 'block';
+					onOff = false;
+				}else{
+					oUl.style.display = 'none';
+					onOff = true;
+				}
+
+			};
+		};
+	</script>
+</head>
+<body>
+	<div id="box">
+		<h2>设置</h2>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+</body>
+</html>
