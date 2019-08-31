@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h4 id="web%E5%89%8D%E7%AB%AF%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0">WEB前端系统学习——课程笔记</h4>
+<p>课程链接：<a href="https://study.163.com/course/courseMain.htm?courseId=1003112011">WEB前端系统学习 - 网易云课堂</a></p>
+<p>笔记链接：<a href="https://github.com/zz2summer/Web-Learn-Note">Web-Learn-Note</a></p>
+<hr>
+<p><a href="#1">一、课程目录</a></p>
+<p><a href="#2">二、各章节笔记</a></p>
+<hr>
+<h4 id=1>一、课程目录</h4>
+<p>章节1 前端的认知</p>
+<p>章节2 CSS引入</p>
+<p>章节3 CSS盒模型</p>
+<p>章节4 文本样式及样式继承</p>
+<p>章节5 常见标签</p>
+<p>章节6 浮动样式和特性</p>
+<p>章节7 浏览器兼容性</p>
+<p>章节8 表格与表单</p>
+<p>章节9 整站规划</p>
+<p>章节10 CSS3常用图片处理</p>
+<p>章节11 CSS盒阴影及文字操作</p>
+<p>章节12 媒体查询</p>
+<p>章节13 HTML新标签使用及CSS选择器</p>
+<p>章节14 服务器字体及弹性盒模型</p>
+<p>章节15 CSS3动画过渡</p>
+<p>章节16 JS认知</p>
+<p>章节17 JS属性操作</p>
+<p>章节18 For循环</p>
+<p>章节19 数据</p>
+<p>章节20 传参</p>
+<p>章节21 变量作用域</p>
+<p>章节22 函数</p>
+<p>章节23 JS动画</p>
+<p>章节24 JS之DOM</p>
+<p>章节25 JS事件</p>
+<p>章节26 JS正则表达式</p>
+<p>章节27 JS面向对象</p>
+<p>章节28 jQuery</p>
+<p>章节29 WEB前端框架—bootstrap</p>
+<hr>
+<h4 id=2>二、各章节笔记</h4>
+<h5 id="%E7%AB%A0%E8%8A%821-%E5%89%8D%E7%AB%AF%E7%9A%84%E8%AE%A4%E7%9F%A5">章节1 前端的认知</h5>
+<ul>
+<li>
+<p>课时1 Html5及行业介绍 23:07</p>
+</li>
+<li>
+<p>课时2 课程介绍及工具安装PS使用 27:02</p>
+<pre><code>  Sublime Text3安装、相关使用插件介绍
+  PS安装
+</code></pre>
+</li>
+<li>
+<p>课时3 HTML文档的结构 14:23</p>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%822-css%E5%BC%95%E5%85%A5">章节2 CSS引入</h5>
+<ul>
+<li>
+<p>课时4 CSS引入之行间样式与内部样式、标签名 21:10</p>
+<pre><code>  1.行间样式的引入
+  	写法：在标签中，写一个style的属性 比如：style=&quot;.....&quot;  在引号当中，写相应的css样式
+  	缺点：不利于维护，不利于代码重用
+  	优点：优先级最高
+
+  2.内部样式表的引入
+  	写法：在head标签里，写一个style的标签，在标签中，通过选择器来控制样式
+  		选择器？
+  			 标签名选择器 
+  			 写法 ：
+  			 	div {
+  					... css的样式
+  			 	}
+
+  			 ID选择器
+  			 写法：
+  			 	首先在相应标签中设置一个ID的属性
+  			 		如： id=&quot;id名&quot;
+  			 	在样式表中，通过
+  			 	# + id名 {
+  					... css的样式
+  			 	}
+  			 温馨小提示：
+  			 	id名要以英文字母开头
+  			 	id名不能重复，是唯一的
+
+  			 class选择器
+  			 写法：
+  			 	首先在相应标签中设置一个class的属性
+  			 		如：class=&quot;class名&quot;
+  			 	在样式表中，通过
+  			 	. + class名 {
+  					... css的样式
+  			 	}
+  			 温馨小提示
+  			 	class名以英文字母开头
+
+  			优先级
+
+  			标签名选择器  &lt; class选择器 &lt; id选择器 &lt; 行间样式
+  			
+  			优点：加载速度快，不需要去请求服务器
+  			缺点：不利于代码重用
+
+  3.外部样式表的引入
+  
+      写法：在head标签里，写一个link标签，用来关联一个css的文件，在css文件中，通过选择器来控制样式	
+
+      温馨提示. 	
+          &lt;link rel=&quot;stylesheet&quot; href=&quot;css文件的路径&quot;&gt;
+
+          优点：利于代码重用
+          缺点：需要加载服务器
+</code></pre>
+</li>
+<li>
+<p>课时5 class选择器和外部样式表，选择器优先 19:18</p>
+<pre><code>  标签名选择器  &lt; class选择器 &lt; id选择器 &lt; 行间样式
+</code></pre>
+</li>
+<li>
+<p>课时6 css宽、高、背景设置 26:35</p>
+<pre><code>  width 宽
+  height 高
+  background 背景
+  	背景色
+  	background-color:颜色值 英文单词 十六进制 rgb
+  	背景图
+  	background-image:url(&quot;图片路径&quot;)
+  	背景图平铺
+  	background-repeat:no-repeat repeat-x repeat-y
+  	背景图定位
+  	background-position:第一个值(X轴的位置) 第二个值(Y轴的位置);
+  		第一个值: left center right 30px;
+  		第二个值: top center bottom 100px;
+
+  	复合写法
+  	background: color image position repeat;
+
+  	背景图滚动
+  	background-attachment:fixed; 
+
+  	背景图尺寸
+  	background-size:第一个值(X轴的比例) 第二个值(Y轴的比例);
+
+  		温馨小提示：css3的样式 不兼容
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%823-css%E7%9B%92%E6%A8%A1%E5%9E%8B">章节3 CSS盒模型</h5>
+<ul>
+<li>
+<p>课时7 css的基础样式-border 17:20</p>
+<pre><code>  border 边框
+  复合写法
+  border: border-width border-style border-color;
+
+  border-width 边框宽度
+  border-style 边框样式 solid 实线 dashed 虚线 dotted 点线 （点线IE6不认）
+  border-color 边框颜色 英文单词 十六进制 rgb
+
+  border-radius 圆角 
+
+  透明 transparent
+</code></pre>
+</li>
+<li>
+<p>课时8 css的基础样式-padding 18:08</p>
+<pre><code>  padding 内边距 内填充
+
+  padding-top 上内边距
+  padding-right 右内边距
+  padding-bottom 下内边距
+  padding-left 左内边距
+
+  padding:10px; 一个值代表  上右下左都是10px
+  padding:10px 20px; 两个值 第一个值代表上下 第二个值代表左右 
+  padding:10px 20px 40px; 三个值 第一个值代表上 第二个值代表左右 第三个值代表下
+  padding:10px 20px 40px 80px; 4个值 第一个值代表上 第二个值代表右 第三个值代表下 第四个值代表左
+</code></pre>
+</li>
+<li>
+<p>课时9 css的基础样式-margin 18:33</p>
+<pre><code>  margin 外边距
+
+  margin-top 上外边距
+  margin-right 右外边距
+  margin-bottom 下外边距
+  margin-left  左外边距
+
+  margin的复合写法
+  margin:10px; 一个值代表  上右下左都是10px
+  margin:10px 20px; 两个值 第一个值代表上下 第二个值代表左右 
+  margin:10px 20px 40px; 三个值 第一个值代表上 第二个值代表左右 第三个值代表下
+  margin:10px 20px 40px 80px; 4个值 第一个值代表上 第二个值代表右 第三个值代表下 第四个值代表左
+</code></pre>
+</li>
+<li>
+<p>课时10 盒模型 14:02</p>
+<pre><code>  空间大小 ：
+  	盒子的总宽度 ： border-left + padding-left + width + padding-right + border-right 
+  	盒子的总高度 ： border-top + padding-top + height + padding-bottom + border-bottom
+  位置
+  	margin
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%824-%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F%E5%8F%8A%E6%A0%B7%E5%BC%8F%E7%BB%A7%E6%89%BF">章节4 文本样式及样式继承</h5>
+<ul>
+<li>
+<p>课时11 文本样式上 17:19</p>
+</li>
+<li>
+<p>课时12 文本样式中 15:47</p>
+</li>
+<li>
+<p>课时13 文本样式下 29:20</p>
+<pre><code>  line-height、text-align、text-indent、font-weight、font-style、decoration、letter-spacing、word-spacing、font……
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%825-%E5%B8%B8%E8%A7%81%E6%A0%87%E7%AD%BE">章节5 常见标签</h5>
+<ul>
+<li>
+<p>课时14 常见标签 语义 title div h 权重 20:39</p>
+<pre><code>  语义：你说的话到底是什么意思
+  权重：优先先考虑谁
+
+  title标签
+  	写法:&lt;title&gt;&lt;/title&gt;
+  	双标签
+  	语义：网页标题
+  	权重最大	
+
+  div标签
+  	写法：&lt;div&gt;&lt;/div&gt;
+  	双标签
+  	语义：无意义
+  	默认样式：无
+
+  h标签
+  	h1~h6
+  	写法：
+  		&lt;h1&gt;&lt;/h1&gt;
+  		&lt;h2&gt;&lt;/h2&gt;
+  		&lt;h3&gt;&lt;/h3&gt;
+  		&lt;h4&gt;&lt;/h4&gt;
+  		&lt;h5&gt;&lt;/h5&gt;
+  		&lt;h6&gt;&lt;/h6&gt;
+  	双标签
+  	语义：标题
+  	默认样式：font-size font-weight margin
+  	
+  	权重 ：h1 最大 h2 次之 h3更次之 。。。。。。。 
+  		h1页面中最好不要超过一个
+  		h2页面中最好不要超过12个
+  		h3之后的h标签就随便了
+
+  样式初始化文件 reset.css
+
+  群组选择器 , 例 :
+  h1,h2,h3,h4,h5,h6{
+  	margin:0;
+  }
+</code></pre>
+</li>
+<li>
+<p>课时15 语义p ul li ol 22:44</p>
+<pre><code>  p标签
+  	写法：&lt;p&gt;&lt;/p&gt;
+  	双标签
+  	语义：段落
+  	默认样式：margin
+
+  	p标签在嵌套时不要包含块元素的标签
+
+  ul标签
+  	写法：&lt;ul&gt;&lt;/ul&gt;
+  	双标签
+  	语义：无序列表
+  	默认样式：margin padding-left list-style-type
+  li标签
+  	写法：&lt;li&gt;&lt;/li&gt;
+  	双标签
+  	语义：列表项
+  	默认样式：list-style-type
+
+  ol标签
+  	写法：&lt;ol&gt;&lt;/ol&gt;
+  	双标签
+  	语义：有序列表
+  	默认样式：margin padding-left list-style-type
+
+  ul,ol和li 是组合标签
+
+  ul,ol的第一层子级一定是li li的父级一定是ul或ol
+
+  &lt;ul&gt;
+  	&lt;li&gt;
+  		&lt;h2&gt;&lt;/h2&gt;
+  	&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;div&gt;
+  	&lt;ul&gt;
+  		&lt;li&gt;&lt;/li&gt;
+  	&lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;ol&gt;
+  	&lt;li&gt;
+  		&lt;ul&gt;
+  			&lt;li&gt;&lt;/li&gt;
+  		&lt;/ul&gt;
+  	&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div&gt;
+  	&lt;ol&gt;
+  		&lt;li&gt;&lt;/li&gt;
+  	&lt;/ol&gt;
+  &lt;/div&gt;
+</code></pre>
+</li>
+<li>
+<p>课时16 dl dt dd 块属性标签特性 14:40</p>
+<pre><code>  dl标签
+  	自定义列表 字典标签
+
+  	dl dt dd
+
+  	写法：&lt;dl&gt;&lt;/dl&gt;
+  	双标签
+  	语义：自定义列表
+  	默认样式：margin
+
+  	dt
+  	写法：&lt;dt&gt;&lt;/dt&gt;
+  	双标签
+  	语义：列表标题
+  	默认样式：无
+
+  	dd
+  	写法：&lt;dd&gt;&lt;/dd&gt;
+  	双标签
+  	语义：列表说明
+  	默认样式：margin-left
+
+  块属性的标签 特性：
+  	1.默认是父级100%的宽
+  	2.支持所有CSS样式
+  	3.独占一行
+</code></pre>
+</li>
+<li>
+<p>课时17 span 内敛属性标签特性 23:08</p>
+<pre><code>  内联属性的标签
+  	内联标签
+  		特性：
+  			1.同属性的标签排在同一排
+  			2.内容撑开宽度
+  			3.不支持宽高，不支持上下的padding和margin
+  			4.代码换行被解析 间距大小取决于父级的font-size的大小
+
+  		span标签
+  			写法：&lt;span&gt;&lt;/span&gt;
+  			双标签
+  			语义：无意义
+  			默认样式：无
+
+  		strong标签
+  			写法：&lt;strong&gt;&lt;/strong&gt;
+  			双标签
+  			语义：强调
+  			默认样式：font-weight
+  				权重比较高
+  		
+  		em标签
+  			写法：&lt;em&gt;&lt;/em&gt;
+  			双标签
+  			语义：强调
+  			默认样式：font-style
+  				权重比较高
+
+  		a标签
+  			写法：&lt;a href=&quot;需要链接的网页地址&quot; target=&quot;打开网页的方式&quot;&gt;&lt;/a&gt;
+  			双标签
+  			语义：超链接
+  			默认样式：color text-decoration cursor
+  				温馨提示：
+  					href属性中
+  						1.如果要链接一个网站地址的话，一定要加 http://
+  						2. # 代表链接到当前页
+  					target
+  						_self 默认 在当前窗口打开
+  						_blank 在新窗口打开
+
+  	内联块标签
+  		内联块属性 
+  			特性：
+  				1.同属性的标签排在同一排
+  				2.内容撑开宽度
+  				3.支持所有的css的样式
+  				4.代码换行被解析，间距大小取决于父级的font-size大小
+  		img标签
+  			写法：&lt;img src=&quot;图片的路径地址&quot; alt=&quot;图片说明&quot;&gt;
+  			单标签
+  			语义：图片
+  			默认样式：低版本浏览器中有默认的边框
+  				温馨小提示：
+  					1.路径地址一定要正确
+  					2.alt属性一定要写
+</code></pre>
+</li>
+<li>
+<p>课时18 內联块特性 img，标签类型转换 23:34</p>
+<pre><code>  标签类型的转换
+      显示为无：display:none;
+
+      块属性 display:block;
+      内联属性
+          内联 display:inline;
+          内联块 display:inline-block;
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%826-%E6%B5%AE%E5%8A%A8%E6%A0%B7%E5%BC%8F%E5%92%8C%E7%89%B9%E6%80%A7">章节6 浮动样式和特性</h5>
+<ul>
+<li>
+<p>课时19 浮动样式和特性介绍 25:51</p>
+<pre><code>  display:inline-block;
+  浮动    float
+
+  浮动的特性
+  	1.浮动的元素排在同一排
+  	2.浮动的元素内容撑开宽度
+  	3.浮动的元素支持所有的css样式
+  	4.浮动的元素脱离文档流
+  	5.浮动的元素提升层级半级
+</code></pre>
+</li>
+<li>
+<p>课时20 BFC常见方法及优缺点 24:55</p>
+<pre><code> 1.overflow 溢出 
+  		会重新计算元素的空间
+  	hidden 溢出隐藏
+  	auto   溢出出现滚动条
+  	scroll 出现滚动条的位置
+  2.元素的居中
+  	margin:0 auto;
+  3.元素的伪类
+  	伪类：就是CSS一些元素身上的特殊属性
+  	:hover 鼠标停留
+  	:after 在元素内容之后插入一些内容
+
+  浮动：其实就是使元素脱离文档流，按照一定的方式排列，遇到相邻的浮动元素或者父级的边界停下来。
+  
+  BFC 就是清浮动 就是用来处理浮动元素脱离文档流的问题
+
+  	1.父级也浮动
+  		弊端：左右的margin:0 auto; 会失效；
+  	2.父级加display:inline-block
+  		弊端：左右的margin:0 auto; 会失效；
+  		(如果需要让元素居中可以给父级加text-align:center)
+  	3.给父级加高
+  		弊端：扩展性不好
+  	4.br标签
+  		写法：&lt;br/&gt;
+  		作用：换行
+  	5.clear
+  		clear 元素的某一方向不允许出现其他的浮动元素
+  		left 
+  		right
+  		both  推荐使用
+  		one
+  		温馨小提示
+  			不符合W3C规范 违反结构 样式 行为 三者分离原则
+  	6.伪类清浮动
+  	:after{
+  		content:&quot;&quot;;display:block;clear:both;
+  	}
+  		温馨提示：目前主流方法。建议使用
+</code></pre>
+</li>
+<li>
+<p>课时21 BFC常见方法及优缺点 提升层级 21:16</p>
+</li>
+<li>
+<p>课时22 定位特性相对定位 绝对定位 固定定位 24:08</p>
+<pre><code>  定位： 把一个元素 按照一定的方式 定到页面的某一个位置
+  position
+
+      相对定位 relative
+          针对自己本身的位置进行定位
+
+      绝对定位 absolute
+          针对有定位的父级的原点进行定位，如果父级没有定位，会找父级的父级身上有没有定位，如果有，针对父级的父级的原点进行定位，以此类推，如果都没有定位，针对document进行定位
+          温馨小提示：
+              绝对定位即使没有初始值，也一定要设置值
+              left:0px;
+              top:0px;
+
+      固定定位 fixed
+          针对页面窗口进行定位
+          温馨提示：
+              IE6 不支持固定定位
+
+  偏移量
+      left
+      top
+      right
+      bottom
+      温馨提示
+          left top 比 right bottom 的优先级要高
+</code></pre>
+</li>
+<li>
+<p>课时23 三种定位的特性 15:46</p>
+<pre><code>  相对定位 relative
+      1.不影响元素本身的特性
+      2.不使元素脱离文档流 
+      3.提升层级
+      4.无法触发BFC
+      5.针对自己本身进行定位
+
+  绝对定位 absolute
+      1.会使元素完全脱离文档流
+      2.内容撑开宽度和高度
+      3.使元素支持所有的CSS样式
+      4.提升层级
+          z-index:数值; 定位层级设置
+              数值越大，层级越高
+      5.绝对定位要和相对定位配合使用
+      6.如果有定位父级，针对定位父级发生偏移，没有定位父级，针对document进行偏移
+      7.如果绝对定位的子级有浮动，可以省略清浮动的操作
+
+  固定定位 fixed
+      1.不兼容IE6
+      2.针对窗口进行定位
+      3.如果固定定位的子级有浮动，可以省略清浮动的操作
+</code></pre>
+</li>
+<li>
+<p>课时24 定位特性的应用及派生选择器的应用 24:09</p>
+<pre><code>  派生选择器是由 id选择器 class选择器 标签名选择器组合而成
+  #box2 span {
+      ……
+  }
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%827-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7">章节7 浏览器兼容性</h5>
+<ul>
+<li>
+<p>课时25 兼容性1 17:11</p>
+</li>
+<li>
+<p>课时26 兼容性2 16:36</p>
+</li>
+<li>
+<p>课时27 兼容性3 18:31</p>
+</li>
+<li>
+<p>课时28 兼容性4 20:50</p>
+</li>
+<li>
+<p>课时29 兼容性5 31:30</p>
+<pre><code>  兼容性：页面在不同的浏览器中可能会显示不同。
+  在IE6下，子级的宽度会撑开父级设置好的宽度
+  温馨小提示：盒模型的计算一定要精确，否则IE浏览器可能会显示不同
+
+  ie6中，元素浮动，如果宽度需要内容撑开，需要给里面的块元素都添加浮动才可以
+
+  在IE6.7下 元素要通过浮动排在同一排，就需要给这行元素都加浮动
+
+  在IE6下元素的高度如果小于19px的时候，会被当成19px来处理
+  解决方法：overflow:hidden;
+
+  在IE6下不支持1px的dotted边框样式
+  解决方法：切背景平铺
+
+  在ie6下，块元素有浮动有横向的margin的值的时候，横向的margin的值会扩大两倍
+
+  margin-left 一行中左侧的第一个元素有双边距
+  margin-right 一行中右侧的第一个元素有双边距
+
+  在IE6,7下，li本身没有浮动，li里面的内容有浮动，li下会产生一个间隙
+  解决方法：1.给li加浮动  2.给li加vertical-align:top
+
+  在IE6,7下，li本身没有浮动，li里面的内容有浮动，li下会产生一个间隙
+  解决方法：
+  	1.给li加浮动
+  	2.给li加vertical-align:top
+  在IE6下最小高度的bug 和 li的间隙问题共存的时候，给li加浮动 ，vertical-align不好使
+
+  当一行子级元素宽度之和和父级的宽度相差超过3px，或者子级元素不满行的情况的时候，最后一行的子级元素的margin-bottom会失效
+
+  在ie6下的文字溢出bug
+  子元素的宽度和父级的宽度如果相差小于3px的时候，两个浮动元素中间有注释或者内联元素，就会出现文字溢出，内联元素越多，溢出越多
+  解决办法：用div把注释或者内联元素包起来
+
+  在IE6下，当浮动元素和绝对定位元素是兄弟关系的时候，绝对定位会失效
+  解决方法：
+  	不让浮动元素和绝对定位元素是兄弟关系，用div或者其他标签把a标签包起来
+
+  在IE6.7下，子级元素有相对定位，父级overflow包不住子级元素
+  解决方法：给父级也加相对定位
+
+  在IE6下，如果绝对定位的父级宽高是奇数的时候，子级元素的right和bottom值会有1px的偏差
+
+  在IE6.7下 输入型的表单标签控件上下会有1px的间隙。
+  处理方法：给input加浮动
+
+  css hack:
+  	\9 ie10之前的ie浏览器解析的代码
+  	+或者* 表示ie7包括7之前的ie浏览器
+  	_表示 ie6包括6之前的ie浏览器
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%828-%E8%A1%A8%E6%A0%BC%E4%B8%8E%E8%A1%A8%E5%8D%95">章节8 表格与表单</h5>
+<ul>
+<li>
+<p>课时30 表格嵌套规则 样式初始化 14:04</p>
+<pre><code>  &lt;table&gt;&lt;/table&gt; 表格
+  &lt;thead&gt;&lt;/thead&gt; 表格的头部
+  &lt;tbody&gt;&lt;/tbody&gt; 表格的身体
+  &lt;tfoot&gt;&lt;/tfoot&gt; 表格的尾部
+  &lt;tr&gt;&lt;/tr&gt;       表格行数
+  &lt;th&gt;&lt;/th&gt;       表格的标题
+  &lt;td&gt;&lt;/td&gt;       表格的单元格
+
+  table {
+  	border:1px solid red;
+  	border-collapse: collapse;
+  }
+  td,th {
+  	border:1px solid red;
+  	padding:0;
+  }
+</code></pre>
+</li>
+<li>
+<p>课时31 表格标签特性 单元格合并 20:13</p>
+<pre><code>  table标签的特性
+  	1.单元格会默认平分整个table的宽度
+  	2.th的内容默认加粗，并且水平和垂直都居中
+  	3.td的内容默认不加粗，并且垂直居中
+  	4.table的宽度决定整个表格的宽度，如果td，th设置的总宽度比table的宽度大，不好使
+  	5.表格的同一列继承最大宽度 （th,td最好都设置上宽度）
+  	6.表格的同一排继承最大高度  （th,td最好都设置上高度）
+
+  单元格合并 
+  	colspan=&quot;数值&quot; 
+  	rowspan=&quot;数值&quot;
+  		数值对应需要合并的单元格的数量 ，
+  		温馨提示：
+  			被合并的单元格要删除，否则会多出一个单元格
+</code></pre>
+</li>
+<li>
+<p>课时32 表单 表单控件input类型 29:22</p>
+<pre><code>  form
+  	action=&quot;需要传送到地址&quot;
+  	method=&quot;传送的方式&quot;
+  		get 在地址栏做内容的拼接，用户可以看的到
+  		post 把表单元素里面的内容做拼接，并且打包传送的action的地址，用户看不到
+  	target
+  		_blank 在新窗口打开
+  		-self  在当前窗口打开
+
+
+  	input的type类型
+  		文本 text
+  		密码 password
+  		radio 单选
+  		checkbox 多选
+  		file  文件上传
+  		button 按钮
+  		hidden 隐藏
+  		reset 重置
+  		submit 提交
+
+  	温馨提示 ：
+  		input里面标签的值都体现在value中 
+  		name属性一定要设置，如果不设置，无法实现上传
+</code></pre>
+</li>
+<li>
+<p>课时33 表单其他控件 样式初始化 09:35</p>
+<pre><code>  select
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%829-%E6%95%B4%E7%AB%99%E8%A7%84%E5%88%92">章节9 整站规划</h5>
+<ul>
+<li>
+<p>课时34 服务器 路径 命名 19:32</p>
+<pre><code>  服务器：可以提供服务的机器 可以提供数据服务的机器 
+
+  命名法
+      驼峰式命名
+          id=&quot;mainLeft&quot;
+          id=&quot;sideBar&quot;
+      下划线 php
+          id=&quot;dl_header&quot;
+      中划线 命名法
+          id=&quot;dl-header&quot;
+
+  (1)页面结构
+  - 容器: container
+  - 页头：header
+  - 内容：content/container
+  - 页面主体：main
+  - 页尾：footer
+  - 导航：nav
+  - 侧栏：sidebar
+  - 栏目：column
+  - 页面外围控制整体布局宽度：wrapper
+  - 左右中：left right center
+
+  (2)导航
+  - 导航：nav
+  - 主导航：mainbav
+  - 子导航：subnav
+  - 顶导航：topnav
+  - 边导航：sidebar
+  - 左导航：leftsidebar
+  - 右导航：rightsidebar
+  - 菜单：menu
+  - 子菜单：submenu
+  - 标题: title
+  - 摘要: summary
+
+  (3)功能
+  - 标志：logo
+  - 广告：banner
+  - 登陆：login
+  - 登录条：loginbar
+  - 注册：regsiter
+  - 搜索：search
+  - 功能区：shop
+  - 标题：title
+  - 加入：joinus
+  - 状态：status
+  - 按钮：btn
+  - 滚动：scroll
+  - 标签页：tab
+  - 文章列表：list
+  - 提示信息：msg
+  - 当前的: current
+  - 小技巧：tips
+  - 图标: icon
+  - 注释：note
+  - 指南：guild
+  - 服务：service
+  - 热点：hot
+  - 新闻：news
+  - 下载：download
+  - 投票：vote
+  - 合作伙伴：partner
+  - 友情链接：link
+  - 版权：copyright
+</code></pre>
+</li>
+<li>
+<p>课时35 网站加载速度和用户流失比率 13:07</p>
+<pre><code>  网站的加载速度
+  	文件大小
+  		css
+  			提取公共样式 把相同的css样式提出 尽量重用 减少代码量
+  			尽量用复合样式减少代码量
+  			尽量发现公共样式 使代码重用减少代码量
+  			相同样式用群组选择器 减少代码量
+
+  		css的维护
+  			划分好区域 方便维护代码
+
+  	文件数量
+  		图片
+</code></pre>
+</li>
+<li>
+<p>课时36 背景图合并 整站思路 26:37</p>
+<pre><code>  图片的命名不要用中文，尽量用英文或者拼音 不要随意加数字 不要大小写切换 要么全大写 要么全小写
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8210-css3%E5%B8%B8%E7%94%A8%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86">章节10 CSS3常用图片处理</h5>
+<ul>
+<li>
+<p>课时37 圆角 多背景 14:19</p>
+<pre><code>  border-radius 圆角
+  	分为水平半径和垂直半径 详情请见 img文件夹中radius.png图
+
+  	水平半径和垂直半径中间用 / 分开 
+  	/左边代表水平半径
+  	/右边代表垂直半径
+
+  多背景
+  	在CSS3中，可以设置多背景，中间通过 ， 隔开，不只可以设置基础样式，还可以设置背景尺寸，同样用 ， 隔开
+</code></pre>
+</li>
+<li>
+<p>课时38 背景尺寸 19:41</p>
+<pre><code>  背景大小
+  	background-size 设置背景图像的大小
+  		1.具体的数值
+  			100px 200px 第一个值表示X轴的大小（宽度） 第二个值表示Y轴的大小（高度）如果只设置了一个值，表示X轴的背景大小（宽度），第二个值会自动缩放或者拉伸
+  		2.百分比
+  			80% 100% 第一个值表示X轴针对自己本身盒子的宽度的比例（宽度） 第二个值表示Y轴针对自己本身盒子高度的比例的大小（高度）如果只设置了一个值，表示X轴针对自己本身盒子的宽度的比例（宽度），第二个值会自动缩放或者拉伸
+  		3.cover
+  			把背景图尽量扩展至最大，使背景图覆盖整个盒子区域，至于X轴和Y轴是否超出，不予考虑
+  		4.contain
+  			把背景图尽量扩展至最大，使背景图尽量显示完整，当X轴或者Y轴其中之一贴近盒子边缘，另一方停下来，至于X轴和Y轴是否有填不满的情况，不予考虑
+
+  在CSS3中，所有的颜色值都可以用rgba的值来写，方法：border:50px solid rgba(255,255,255,0.9);
+  a表示透明度，数值在0~1之间，数值越大，越不透明
+</code></pre>
+</li>
+<li>
+<p>课时39 背景裁切 浏览器内核前缀 背景裁切 22:44</p>
+<pre><code>  背景裁切：background-clip   
+  	1.border-box
+  		从边框开始显示背景 
+  	2.padding-box
+  		从padding区域开始显示背景
+  	3.content-box
+  		从内容区域显示背景
+  	4.text       火狐不支持 ie9,10不支持
+  		从文本区域显示背景
+
+  			温馨提示：
+  				需要rgba的配合 （需要rgba的透明度进行配合）
+
+  浏览器内核前缀
+  w3c组织 
+      -webkit-transition: 1s; chrome safari .... 
+      -moz-transition: 1s;    火狐
+      -ms-transition: 1s;     ie 360 
+      -o-transition: 1s;      Opera
+      transition: 1s;         w3c标准样式
+</code></pre>
+</li>
+<li>
+<p>课时40 线型渐变 20:24</p>
+</li>
+<li>
+<p>课时41 线型渐变笔记 16:56</p>
+<pre><code>  线型渐变 ie9以下不支持 渐变属于背景下的一个属性
+
+      方法 linear-gradient();
+      写法：
+          比如：background: linear-gradient(90deg,red,yellow,green,blue);
+      括号里的第一个值，是角度
+          第一个值可以模糊的值，也可以是具体的数值
+              模糊的值：
+                  to right
+                  to left 
+                  to top
+                  to bottom
+
+              具体的角度数值
+                  
+                  角度是指水平线和渐变线之间的角度，按逆时针方向计算
+                      比如：
+                          标准
+                              0deg  从下到上
+                              90deg 从左到右
+
+                          非标准
+                              0deg 从左到右
+                              90deg 从下到上
+
+                          标准和非标准的换算公式
+                              90 - x  = y
+
+                              x为标准角度
+                              y为非标准角度
+                  （温馨提示：参考图：渐变角度参考图）
+          从第二个值开始是颜色值，可以通过具体的数值确定颜色值渐变的区域，比如
+          background: linear-gradient(90deg,
+              red 100px,
+              yellow 180px,
+              green 280px,
+              blue
+          );
+          （温馨提示：见图：颜色值区域参考图）
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8211-css%E7%9B%92%E9%98%B4%E5%BD%B1%E5%8F%8A%E6%96%87%E5%AD%97%E6%93%8D%E4%BD%9C">章节11 CSS盒阴影及文字操作</h5>
+<ul>
+<li>
+<p>课时42 径向渐变 重复渐变 19:54</p>
+<pre><code>  径向渐变 ie9以下不支持
+      渐变都是背景下一个属性
+          background: radial-gradient(at center,red,yellow,blue);
+      径向渐变是从圆心往进行渐变
+          括号里的第一个值，是圆心位置
+              可以使模糊的值，也可以是具体的数值
+                  模糊的值
+                      at left
+                      at center
+                      at right
+                      at top
+                      at bottom
+                  具体的数值
+                      at 100px 200px
+                          100px为X轴的偏移量
+                          200px为Y轴的偏移量
+          从第二个值开始，是颜色值 ，颜色值可以无限的写	
+              颜色值，可以通过具体的数值来规定，渐变区域或者范围
+                  具体的数值可以是
+                      1，100px
+                      2，百分比
+
+  重复渐变
+  background: repeating-linear-gradient(to right,red 10%,yellow 20%,blue 30%);
+  background: repeating-radial-gradient(at center,red 10%,yellow 20%,blue 30%);                
+</code></pre>
+</li>
+<li>
+<p>课时43 盒阴影 文字阴影 18:36</p>
+<pre><code>  盒阴影
+      box-shadow
+          第一个值：默认省略或者inset 可以省略，省略即为默认
+              处理盒子阴影在盒子的里面还是外面
+
+              默认省略 ，就是外面
+              inset   就是里面
+          第二个值 ：
+              具体的数值 可以是正数，也可以是负数 为盒子阴影X轴的大小
+
+          第三个值 ：
+              具体的数值 可以是正数，也可以是负数 为盒子阴影Y轴的大小
+
+          第四个值 ：
+              具体的数值 可以是正数，不可以是负数 可以省略 省略之后 ，没有模糊面积 为盒子阴影模糊面积
+
+          第五个值 ：具体的颜色值，英文单词 十六进制 rgb rgba
+
+  盒阴影值可以不断的添加，中间用逗号隔开
+
+  文字阴影
+  	第一个值 ：
+  		具体的数值 可以是正数，也可以是负数 为文字阴影X轴的大小
+
+  	第二个值 ：
+  		具体的数值 可以是正数，也可以是负数 为文字阴影Y轴的大小
+
+  	第三个值 ：
+  		具体的数值 可以是正数，不可以是负数 可以省略 省略之后 ，没有模糊面积 为文字阴影模糊面积
+
+  	第四个值 ：具体的颜色值，英文单词 十六进制 rgb rgba
+
+  	文字阴影值可以不断的添加，中间用逗号隔开
+</code></pre>
+</li>
+<li>
+<p>课时44 蒙版 倒影 19:48</p>
+<pre><code>  蒙版
+  	目前只有-webkit-内核的浏览器支持，其他不支持
+  	需要PNG的透明度遮罩
+  	和背景设置一样，可以设置多个png为蒙版 
+
+  倒影只有-webkit-内核浏览器支持
+  	-webkit-box-reflect: below;
+
+  	第一个值
+  		控制倒影出现的位置
+  			上 above
+  			下 below
+  			左 left
+  			右 right
+  	第二个值
+  		倒影和本体之间间隙
+  			为具体的数值： 比如 10px
+  			-webkit-box-reflect: below 10px;
+
+  	第三个值
+  		可以透明度的渐变，也可以一个png透明的图片链接
+  			透明度的渐变
+  				-webkit-box-reflect:below 10px linear-gradient(to top,
+  					rgba(255,255,255,1) 10px,
+  					rgba(255,255,255,0.3) 80px,
+  					rgba(255,255,255,0) 200px,
+  					rgba(255,255,255,0),
+  					rgba(255,255,255,0)
+  				);					
+  			png透明的图片链接
+  				-webkit-box-reflect:left 10px url(&quot;img/7.png&quot;);
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8212-%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2">章节12 媒体查询</h5>
+<ul>
+<li>
+<p>课时45 媒体查询 13:35</p>
+<pre><code>  例子：
+  @media screen and (max-width: 460px){
+  	div {
+  		width:300px;
+  		height:600px;
+  		border:30px solid yellow;
+  		background: #000;
+  	}
+  }
+  当屏幕发生变化，根据设置的最大值宽度或者最小值宽度时，读取大括号中的代码 比如：以下
+  
+  @media screen and (当屏幕发生变化，最大宽度到达某一个值的时候 比如：max-width:960px){
+  	会执行以下代码
+  	div {
+  		width:300px;
+  		height:600px;
+  		border:30px solid yellow;
+  		background: #000;
+  	}
+  }
+</code></pre>
+</li>
+<li>
+<p>课时46 viewport 布局百分比 18:47</p>
+<pre><code>  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; /&gt;
+
+  width :控制viewport的大小 ，可以制定一个数值或一个特殊的值
+  	如：device-width就是设备的宽度 （单位为缩放100%的CSS像素）
+
+  initial-scale：
+  	初始缩放，就是页面开始缩放的程度，是一个浮点数
+  		例如：initial-scale=1.0 ，页面开始的时候，就是1：1的比例
+  maximum-scale=1.0 , minimum-scale=1.0
+  	最大缩放和最小缩放，允许放大或缩小多少倍
+
+  user-scalable=no
+  	是否允许用户调整页面
+  	如果为YES 用户可以改变
+  	如果为NO 用户不可以改变
+  	如果为NO ，用户不能缩放，maximum-scale=1.0 , minimum-scale=1.0 会失效
+
+  响应式布局
+      百分比布局
+
+          布局百分比
+              width
+              padding-left
+              padding-right
+              margin-left
+              margin-right
+              left
+              right
+
+              需要牢记的公式
+
+                  目标元素的宽度 / 父级元素的宽度 = 百分比宽度
+              温馨提示：
+                  高度的增加或者减少需要配合媒体查询
+                      高度：
+                          height
+                          padding-top
+                          padding-bottom
+                          margin-top
+                          margin-bottom
+                          top
+                          bottom 
+                      @media screen and () {}
+
+          图片百分比
+              图片的宽度和高度比较弹性化
+              图片如果不设置宽度和高度，会原始显示，当设置了图片的宽度百分比时，宽度发生变化，高度也会等比缩放
+
+              温馨提示，图片有时候太大，会超出，最好设置一个上限值，max-width 或者 max-height
+
+          文字百分比
+              em 和 rem 
+              em父级的文字大小的倍数 父级大小是多少，决定子级文字em的大小
+
+              rem 就是针对HTML文字字体大小
+
+          一般响应式布局都用rem 通过媒体查询改变html的文字大小，就可以整体改变所有的页面中的文字大小
+</code></pre>
+</li>
+<li>
+<p>课时47 图片文字百分比 设备宽度自定义 23:19</p>
+<pre><code>  图片的宽度和高度比较弹性化
+  	图片如果不设置宽度和高度，会原始显示，当设置了图片的宽度百分比时，宽度发生变化，高度也会等比缩放
+
+  	温馨提示，图片有时候太大，会超出，最好设置一个上限值，max-width 或者 max-height
+
+  em 和 rem 
+  	em父级的文字大小的倍数 父级大小是多少，决定子级文字em的大小
+  	rem 就是针对HTML文字字体大小
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8213-html%E6%96%B0%E6%A0%87%E7%AD%BE%E4%BD%BF%E7%94%A8%E5%8F%8Acss%E9%80%89%E6%8B%A9%E5%99%A8">章节13 HTML新标签使用及CSS选择器</h5>
+<ul>
+<li>
+<p>课时48 H5新标签 语义 22:35</p>
+<pre><code>  &lt;header&gt;&lt;/header&gt;
+  	语义：文档的头部或者页面的头部
+
+  &lt;nav&gt;&lt;/nav&gt;
+  	语义：导航
+
+  &lt;footer&gt;&lt;/footer&gt;
+  	语义：文档的脚部或者页面的脚部，通常用来包含文档的版权信息 或者授权 或者友情链接
+
+  &lt;aside&gt;&lt;/aside&gt;
+  	语义：侧边栏 或者附属信息
+
+  &lt;hgroup&gt;&lt;/hgroup&gt;
+  	语义：标题的集合 ，可以用来包含多个h1~h6的标签
+
+  &lt;figure&gt;&lt;/figure&gt;
+  	语义：图片区域 ，可以包含多个图片或者一个figcaption,ficaption用来表示图片标题
+
+  &lt;figcaption&gt;&lt;/figcaption&gt;
+  	语义：图片区域的标题 ，一般写在figure
+
+  &lt;section&gt;&lt;/section&gt;
+  	语义：分区 ， 页面的或者文档的一部分区域 ，有独立的内容，但结构相近，就可以用section
+  	可以包含 header h1 ~ h6等等
+
+  &lt;article&gt;&lt;/article&gt;
+  	语义：独立的内容 ，可以是文章 blog 帖子 短文或者回复 评论 
+</code></pre>
+</li>
+<li>
+<p>课时49 css3子代 兄弟 同级通用 属性选择器 15:04</p>
+<pre><code>  子选择器 ： &gt; 
+  		 作用范围： div下的span会有享受样式 ， p里的不享受， 原因，p里的span是孙子
+  div&gt;span {
+  	border:1px solid red;
+  	background: yellow;
+  }
+  
+  相邻兄弟选择器： +
+  		作用范围 ：可以选择相邻的两个元素，元素一定要有同一个父级，+后面的元素享受样式
+  p+span {
+  	border:1px solid red;
+  	background: yellow;
+  }
+
+  同级元素通用选择器： ~
+  		作用范围：所有相同父级中，位于 P 标签之后的同级的 span 标签 享受样式
+  p~span {
+  	border:1px solid red;
+  	background: yellow;
+  }
+
+  属性选择器
+      第一种
+          选择带有某种属性的所有元素
+              a[属性名]{…………}
+
+      第二种
+          选择带有某种属性，并且规定属性值的元素
+              input[属性名=&quot;属性值&quot;]{
+                  …………
+              }
+</code></pre>
+</li>
+<li>
+<p>课时50 A标签的伪类 伪类选择器 18:50</p>
+<pre><code>  伪类选择器
+      选择属于其父级下的第n个元素，并且必须是p标签，直到匹配位置，否则不生效
+          p:nth-child(n){
+              background: red;
+          }
+          温馨提示：n可以用来计算
+
+      选择属于其父级下的第1个元素，并且必须是p标签，否则不生效
+      p:first-child{
+          background: red;
+      }
+
+      选择属于其父级下的最后1个元素，并且必须是p标签，否则不生效
+      p:last-child{
+          background: red;
+      }
+
+      选择属于其父级下的第n个元素，并且一定会匹配p标签
+          p:nth-of-type(n){
+              background: red;
+          }
+          温馨提示：n可以用来计算
+
+      选择属于其父级下的第1个元素，并且一定会匹配p标签
+      p:first-of-type{
+          background: red;
+      }
+
+      选择属于其父级下的最后1个元素，并且一定会匹配p标签
+      p:last-of-type{
+          background: red;
+      }
+
+  伪类 ： 是一种特殊性的属性， 可以理解为表示一种状态 love hate 爱恨记忆法
+  after
+  before
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8214-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AD%97%E4%BD%93%E5%8F%8A%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B">章节14 服务器字体及弹性盒模型</h5>
+<ul>
+<li>
+<p>课时51 服务器字体 18:22</p>
+<pre><code>  @font-face {
+  	font-family:&quot;瞎编的 自定义的字体名字&quot;;
+  	src:
+  		url(&quot;字体图片的路径地址&quot;),
+  		url(&quot;字体图片的路径地址&quot;),
+  		url(&quot;字体图片的路径地址&quot;),
+  		url(&quot;字体图片的路径地址&quot;);
+  	font-weight:;
+  	font-style:;
+  }
+  @font-face {
+      font-family: 'b_surfersplane';
+      src: url('bsurp___-webfont.eot');
+      src: url('bsurp___-webfont.eot?#iefix') format('embedded-opentype'),
+           url('bsurp___-webfont.woff2') format('woff2'),
+           url('bsurp___-webfont.woff') format('woff'),
+           url('bsurp___-webfont.ttf') format('truetype'),
+           url('bsurp___-webfont.svg#b_surfersplane') format('svg');
+      font-weight: normal;
+      font-style: normal;
+
+  }
+  .ttf
+  .otf
+  .woff
+  .eot
+  .svg
+  http://www.dafont.com/ 找字体的网站
+  https://www.fontsquirrel.com/tools/webfont-generator 修改字体图片格式的线上工具
+</code></pre>
+</li>
+<li>
+<p>课时52 字体图标 怪异盒模型 17:57</p>
+<pre><code>  www.iconfont.cn
+  @font-face {
+    font-family: &quot;aaaa&quot;;
+    src: url('fontImg/1/iconfont.eot?t=1478759787428'); /* IE9*/
+    src: url('fontImg/1/iconfont.eot?t=1478759787428#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fontImg/1/iconfont.woff?t=1478759787428') format('woff'), /* chrome, firefox */
+    url('fontImg/1/iconfont.ttf?t=1478759787428') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('fontImg/1/iconfont.svg?t=1478759787428#iconfont') format('svg'); /* iOS 4.1- */
+  }
+
+  .iconfont {
+    font-family:&quot;aaaa&quot; ;
+    font-size:40px;
+    font-style:normal;
+    width:300px;
+    height:300px;
+    border:1px solid red;
+    color:#2EEF64;
+    text-indent: 30px;
+    line-height: 300px;
+  }
+
+  .iconfont:before { content: &quot;\3432&quot;; }
+
+  box-sizing: 盒模型的设置
+
+  标准盒模型 content-box
+  	盒子的宽：border + padding + width
+  	盒子和高：border + padding + height
+  怪异盒模型 border-box
+  	盒子和宽：就是设置的width 会包含 border + padding 
+  	盒子的高：就是设置的height 会包含 border + padding
+</code></pre>
+</li>
+<li>
+<p>课时53 弹性盒模型 分栏 31:28</p>
+<pre><code>  弹性盒模型 ，不兼容 ，w3c目前还没有标准化 ，需要加浏览器内核前缀
+
+  如果想要搭建弹性盒模型，首先要在父级建立弹性盒模型的空间
+  方法：
+  	display:-webkit-box;
+  	display:-moz-box;
+  	display:-ms-box;
+  	display:-o-box;
+  	display:box;
+
+  排列方式 有两种 水平 和 垂直
+  -webkit-box-orient:vertical; 垂直
+  -webkit-box-orient:horizontal;  水平 默认值
+
+  子级的排列位置 ，可以给父级加-webkit-box-pack 来实现
+  方法：
+  	-webkit-box-pack:
+  	-moz-box-pack:
+  	-ms-box-pack:
+  	-o-box-pack:
+  	box-pack:
+
+  		相应的值有：
+  			start 左边 默认值
+  			center 中间
+  			end 右边
+  			justify 均分
+  子级自己本身可以均分父级的宽度，根据自身的分数进行均分
+  	设置分数的方法
+  		给子级加
+  			-webkit-box-flex:几份;
+  			比如：
+  				-webkit-box-flex:1; 根据一份的宽度来计算 分一份
+  				-webkit-box-flex:5; 根据一份的宽度来计算 分五份
+
+  column-count:3; 分几栏 
+  	column-gap:100px; 分栏之间的间隙 数值越大 间隙越大
+  	column-rule: 5px solid #25AB12; 类似border的设置，可以设置分栏之间的分界线
+  	ie9以下不支持 火狐需要加前缀
+
+  !important   不推荐使用
+  	一般写在想要的样式后面 ，把相应的样式的优先级提升至最高
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8215-css3%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1">章节15 CSS3动画过渡</h5>
+<ul>
+<li>
+<p>课时54 过渡 18:10</p>
+<pre><code>  过渡 ，就是从一个值到另一个值之间的过程
+  transition
+  	比如：
+  		transition:1s 1s all ease; 后三个值可以省略
+
+  		第一个值：过渡的总时间 单位是s或ms
+
+  		第二个值：延迟过渡的时间 单位是s或ms
+
+  		第三个值：需要过渡的样式
+
+  		第四个值：过渡的方式
+
+  					linear 匀速
+
+  					ease    慢速开始，然后慢慢变快
+  					ease-in 慢速开始
+  					ease-out 慢速结束
+  					ease-in-out 开始和结束都慢
+  					cubic-bezier(1,0,1,0) 贝瑟尔曲线
+  					贝瑟尔曲线线上工具 http://xuanfengge.com/easeing/ceaser/
+</code></pre>
+</li>
+<li>
+<p>课时55 2D变换 20:42</p>
+<pre><code>  变换    transform
+      位移
+          translate 当中接受的值就是正常的px值 ru：200px
+          translateX() 正值往右走 负值往左走
+          translateY() 正值往下走 负值往上走
+          translate(X轴的位移量,Y轴的位移量)
+              第一个值X轴位移量
+              第二个值Y轴的位移量
+              中间用逗号隔开
+
+      旋转
+          rotate 当中接受的是一个旋转角度 如：45deg
+          rotate() 正值是顺时针 负值逆时针
+
+      缩放
+          scale 当中接受的是一个数值，可以使浮点数 如：1.2 或者 0.3 或者 2
+          scale() 大于1 是放大效果 小于1 是缩小效果
+      斜切
+          skew 当中接受的也是一个旋转角度 如：40deg
+          skewX() 
+          skewY()
+          skew(30deg,30deg)
+              第一个值X轴斜切角度
+              第二个值Y轴斜切角度
+              中间用逗号隔开
+
+  变换原点
+      transform-origin
+          left
+          top
+          right
+          bottom
+          center
+          默认是center 当设置相应的值后，会按照相应的设置的值发生变换
+</code></pre>
+</li>
+<li>
+<p>课时56 3D变换 27:12</p>
+<pre><code> 3d效果，首先需要给需要进行3d变换的元素的父级，添加3d环境 和 景深
+  	方法：
+  		transform-style:preserve-3d; 添加3d环境
+  		perspective:数值; 如：300px;
+
+  		transform
+  			rotateX 跳水 或者 后手翻 前空翻
+  			rotateY 扫堂腿 或者 红人 芭蕾舞
+  			rotateZ 大风车 或者 风火轮 
+
+  			translateX 向左右 向右走
+  			translateY 上天 入地
+  			translateZ 冲着你来 或者 冲着你倒退
+
+  兼容 ie9以下不支持
+</code></pre>
+</li>
+<li>
+<p>课时57 animation 关键帧 17:14</p>
+<pre><code>  动画
+  	animation
+  		首先要先定义一套关键帧
+  			方法：
+  				@keyframes 动画名称{
+  					0%{
+  						相应的样式
+  					}
+  					10%{
+  						相应的样式
+  					}
+  					20%{
+  						相应的样式
+  					}
+  					100%{
+  						相应的样式
+  					}
+  				}
+  			（温馨提示，可以从0%一直设置到100%）
+
+  		然后调用 动画名称 
+  			方法：
+  				animation:1s 2s 动画名称 运动方式 动画执行的次数
+  					第一个值：运动的总时间
+  					第二个值：延迟的运动时间
+  					第三个值：动画名称
+  					第四个至：运动方式
+  						linear 匀速
+
+  						ease    慢速开始，然后慢慢变快
+  						ease-in 慢速开始
+  						ease-out 慢速结束
+  						ease-in-out 开始和结束都慢
+  						cubic-bezier(1,0,1,0) 贝瑟尔曲线
+  						贝瑟尔曲线线上工具 http://xuanfengge.com/easeing/ceaser/
+
+  					第五个值：动画执行的次数
+  						可以具体的数值 也可以是无限次 infinite
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8216-js%E8%AE%A4%E7%9F%A5">章节16 JS认知</h5>
+<ul>
+<li>
+<p>课时58 JS认知 18:06</p>
+</li>
+<li>
+<p>课时59 显示隐藏 29:45</p>
+<pre><code>  下拉列表的显示隐藏
+  变量声明
+  	方法：
+  		var 变量名
+  			var变量声明的关键字
+  			变量名就是你自己瞎编的 但是不能是关键保留字 比如：var function
+  			关键字 保留字的网址 http://www.runoob.com/js/js-reserved.html
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8217-js%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C">章节17 JS属性操作</h5>
+<ul>
+<li>
+<p>课时60 JS属性操作读写 13:59</p>
+<pre><code>  属性操作
+  	属性 分为属性名 和 属性值
+  		在标签中设置属性 方法： 属性名=&quot;属性值&quot;
+  		在CSS中设置属性 方法： 属性名:属性值;
+  	操作
+
+  		读操作 获取 查找
+  			方法： 元素.属性名 比如： oDiv.style.width
+  		写操作 添加 替换 修改
+  			方法： 元素.属性名 = 新要设置的值 比如：oDiv.style.width = '400px'
+  			
+  			= 一个等号就是赋值
+  				会把等号右边的给左边
+</code></pre>
+</li>
+<li>
+<p>课时61 字符串拼接 15:43</p>
+<pre><code>  字符串的拼接
+  	字符串就是JS数据类型的一种
+  		数字 可以进行运算
+  		字符串 进行拼接
+  		布尔  
+
+  	+ 
+  		数字类型相加可以运算 就是相加
+  		字符串类型和任何类型相加都是字符串，都会进行拼接
+</code></pre>
+</li>
+<li>
+<p>课时62 if 16:13</p>
+</li>
+<li>
+<p>课时63 innerHTML className 22:11</p>
+<pre><code>  innerHTML就是元素里面所有的东西 文字 换行 标签 …… 
+
+  innerHTML可以进行读操作 也可以进行写操作
+  	oDiv.innerHTML 
+  		读取元素里面的内容
+  	oDiv.innerHTML = 新的值;
+  		替换
+  			用新的值 代替 旧的值
+
+  	+=
+  		在自身的基础上 累加一个新的值 可以用加等
+  		比如
+  			a = a + 2;
+  			a += 2;
+
+  		在比如：
+  			oDiv.innerHTML = oDiv.innerHTML + '诺手';
+  			oDiv.innerHTML += '诺手';
+</code></pre>
+</li>
+<li>
+<p>课时64 “-” 33:15</p>
+<pre><code>  在JS中的属性操作中，不允许出现“-” ，用驼峰式命名代替
+
+  数组就是用来存数据的大仓库
+  		1.每一个数据中间用逗号隔开
+  		2.通过数组下标读取 下标是从0开始
+  			比如
+  				var arr = [1,2,'img/1.jpg'];
+  				alert(arr[2]);
+  		3.数组的长度 length
+</code></pre>
+</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8218-for%E5%BE%AA%E7%8E%AF">章节18 For循环</h5>
+<ul>
+<li>课时65 for 20:25</li>
+<li>课时66 for添加事件处理函数 18:57</li>
+<li>课时67 this 28:25</li>
+<li>课时68 自定义属性 20:58</li>
+<li>课时69 开关 22:55</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8219-%E6%95%B0%E6%8D%AE">章节19 数据</h5>
+<ul>
+<li>课时70 数据类型 16:44</li>
+<li>课时71 数据类型转化 19:51</li>
+<li>课时72 隐式类型转化 17:11</li>
+<li>课时73 NaN 20:11</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8220-%E4%BC%A0%E5%8F%82">章节20 传参</h5>
+<ul>
+<li>课时74 函数传参 12:05</li>
+<li>课时75 传参例子布局 05:52</li>
+<li>课时76 传参例子讲解上 12:25</li>
+<li>课时77 传参例子讲解下 14:50</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8221-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F">章节21 变量作用域</h5>
+<ul>
+<li>课时78 变量作用域（上）18:22</li>
+<li>课时79 变量作用域（中）12:31</li>
+<li>课时80 变量作用域（下）06:05</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%8222-%E5%87%BD%E6%95%B0">章节22 函数</h5>
+<ul>
+<li>课时81 字符串函数（上）12:21</li>
+<li>课时82 字符串函数（下）18:54</li>
+<li>课时83 数组函数（上）16:19</li>
+<li>课时84 数组函数（下）19:43</li>
+<li>课时85 日期函数（上）15:30</li>
+<li>课时86 日期函数（下）05:11</li>
+<li>课时87 计时器 19:26</li>
+</ul>
+<h5 id="%E7%AB%A0%E8%8A%82-23js%E5%8A%A8%E7%94%BB">章节 23JS动画</h5>
+<p>课时88获得计算后样式上12:48
+课时89获得计算后样式下11:02
+课时90大图滚动117:13
+课时91大图滚动210:36
+课时92大图滚动313:09
+课时93样式获得10:46
+课时94样式获得练习及随机数17:23
+课时95Tweenjs12:08</p>
+<h5 id="%E7%AB%A0%E8%8A%8224js%E4%B9%8Bdom">章节24JS之DOM</h5>
+<p>课时96节点操作112:28
+课时97节点操作214:58
+课时98DOM添加标签113:10
+课时99DOM添加标签209:39
+课时100DOM常用属性115:45
+课时101DOM常用属性213:48
+课时102DOM常用属性练习19:37</p>
+<h5 id="%E7%AB%A0%E8%8A%8225js-%E4%BA%8B%E4%BB%B6">章节25JS  事件</h5>
+<p>课时103事件对象上14:30
+课时104事件对象下14:53
+课时105事件对象练习及鼠标事件上19:03
+课时106事件对象练习及鼠标事件下13:45
+课时107鼠标事件练习122:01
+课时108事件冒泡17:41
+课时109事件监听20:01
+课时110移入移出效果练习18:17
+课时111阻止默认事件及键盘事件上13:18
+课时112阻止默认时间及键盘事件下13:56
+课时113滚轮事件练习24:42
+课时114自定义滚动条115:42
+课时115自定义滚动条212:27
+课时116碰撞检测118:10
+课时117碰撞检测208:44
+课时118FlappyBird讲解117:17
+课时119FlappyBird讲解210:18
+课时120FlappyBird讲解320:34
+课时121FlappyBird讲解415:13
+课时122FlappyBird讲解509:24
+课时123表单事件14:48
+课时124移动端事件一20:46
+课时125移动端事件二14:20
+课时126移动端事件三10:01
+课时127移动端事件四08:02
+课时128移动端事件五-摇一摇12:46
+课时129TouchJS安装及使用10:44
+课时130TouchJS实现拖拽13:26
+课时131TouchJS实现旋转11:16
+课时132TouchJS缩放08:07
+课时133Swiper介绍16:57
+课时134Swiper使用120:42
+课时135Swiper使用219:26
+课时136Swiper使用318:08
+课时137Swiper使用413:59
+课时138Swiper使用517:09</p>
+<h5 id="%E7%AB%A0%E8%8A%8226js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">章节26JS正则表达式</h5>
+<p>课时139正则表达式的创建13:57
+课时140正则及字符串常用函数17:56
+课时141正则量词与元字符117:12
+课时142正则量词与元字符210:03
+课时143正则量词与元字符315:15
+课时144正则量词与元字符413:13
+课时145正则量词与元字符509:20
+课时146正则量词与元字符611:20
+课时147正则转译字符17:41
+课时148正则QQ号验证14:45
+课时149正则电话号验证11:07
+课时150正则HTML标签验证17:08</p>
+<h5 id="%E7%AB%A0%E8%8A%8227js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">章节27JS面向对象</h5>
+<p>课时151面向对象概述及创建上17:39
+课时152面相对象概述及创建下15:14
+课时153面向对象创建上11:57
+课时154面相对象创建中13:44
+课时155面向对象创建下23:58
+课时156面向对象案例讲解上17:06
+课时157面向对象案例讲解下11:53
+课时158面向对象原型17:14
+课时159面向对象封装案例18:20</p>
+<h5 id="%E7%AB%A0%E8%8A%8228jquery">章节28jQuery</h5>
+<p>课时160jQuery介绍14:20
+课时161jQuery介绍212:43
+课时162jQuery选择器115:19
+课时163jQuery选择器217:45
+课时164jQuery选择器316:24
+课时165jQuery选择器413:11
+课时166jQueryDOM操作117:06
+课时167jQueyrDOM操作215:38
+课时168jQuery事件121:11
+课时169jQuery事件228:00
+课时170jQuery样式设置1
+课时171jQuery样式设置217:37
+课时172jQuery动画及插件32:08
+课时173jQuery盖房子练习121:07
+课时174jQuery盖房子练习217:20
+课时175jQuery盖房子练习319:27
+课时176jQuery盖房子练习416:05</p>
+<h5 id="%E7%AB%A0%E8%8A%8229web%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E2%80%94bootstrap">章节29WEB前端框架—bootstrap</h5>
+<p>课时177HBuilder和Less的变量使用19:54
+课时178Less使用10:44
+课时179BootStrap全局样式20:36
+课时180BootStrap表格和按钮15:54
+课时181BootStrap表单和图片20:15</p>
+
+</body>
+</html>
